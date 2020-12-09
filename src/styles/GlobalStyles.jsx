@@ -5,6 +5,7 @@ import {MainFont} from './Fonts';
 export const GlobalStyle = createGlobalStyle`
   * { 
     box-sizing: border-box;
+    ${normalize}
     padding: 0;
     margin: 0;
   }
