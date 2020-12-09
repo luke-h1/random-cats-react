@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'polished';
-
+import {MainFont} from './Fonts';
 export const GlobalStyle = createGlobalStyle`
   * { 
     box-sizing: border-box;
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Roboto, 'sans-serif'"
+    font-family: ${MainFont};
   }
   *, *:before, *:after {
     box-sizing: inherit;
