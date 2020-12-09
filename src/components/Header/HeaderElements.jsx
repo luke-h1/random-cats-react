@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const HeaderWrap = styled.header`
   padding: 1.5rem;
-  margin: 0;
+  margin-bottom: 5rem;
   text-align: center;
   background: #000;
   color: #fff;

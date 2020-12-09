@@ -3,6 +3,7 @@ import axios from 'axios';
 import {
   Wrapper,
   Button,
+  CatWrap,
 } from './FormElements';
 import CatCard from '../CatCard/CatCard';
 
@@ -42,7 +43,9 @@ const Form = () => {
     <>
       <Wrapper>
         {loading || null}
-        {cats || null}
+        <CatWrap>
+          {cats || null}
+        </CatWrap>
         {error || null}
         <Button onClick={getMoreCatsForSomeReason}>Get more cats</Button>
       </Wrapper>
