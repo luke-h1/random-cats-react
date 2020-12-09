@@ -3,7 +3,7 @@ import React from 'react';
 
 const CatCard = ({ cat }) => (
   <>
-    <img src={cat.file} alt="cat" />
+    <img src={cat} alt="cat" />
   </>
 );
 export default CatCard;
