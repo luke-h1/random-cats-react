@@ -1,0 +1,16 @@
+/* eslint-disable */
+import styled from 'styled-components';
+
+export const HeaderWrap = styled.header`
+  padding: 1.5rem;
+  margin: 0;
+  text-align: center;
+  background: #000;
+  color: #fff;
+`
+
+export const HeaderTitle = styled.h1`
+  text-align: center;
+  margin: 5px;
+  color: #fff;
+`
