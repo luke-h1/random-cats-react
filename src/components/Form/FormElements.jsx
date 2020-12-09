@@ -37,3 +37,7 @@ export const CatWrap = styled.div`
   justify-content: center;
   margin: 0 auto;
 `
+export const Error = styled.h1`
+  color: red;
+  text-align: center;
+`

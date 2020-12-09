@@ -4,6 +4,7 @@ import {
   Wrapper,
   Button,
   CatWrap,
+  Error,
 } from './FormElements';
 import CatCard from '../CatCard/CatCard';
 
@@ -42,11 +43,11 @@ const Form = () => {
   return (
     <>
       <Wrapper>
-        {loading || null}
+        {loading ? <h1>Loading Cats...</h1> : null}
         <CatWrap>
           {cats || null}
         </CatWrap>
-        {error || null}
+        {error ? <Error>{error}</Error> : null}
         <Button onClick={getMoreCatsForSomeReason}>Get more cats</Button>
       </Wrapper>
     </>
