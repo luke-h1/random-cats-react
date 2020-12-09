@@ -7,7 +7,7 @@ function App() {
     <>
       <BrowserRouter>
         <Switch>
-         <GlobalStyle />
+          <GlobalStyle />
           <Route path="/" exact component={Home} />
         </Switch>
       </BrowserRouter>

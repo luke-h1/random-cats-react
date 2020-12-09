@@ -1,9 +1,32 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import {
+  Wrapper,
+} from './FormElements';
+import CatCard from '../CatCard/CatCard';
 
 const Form = () => {
   const [cats, setCats] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  const showError = (msg) => {
+    setError(msg);
+    setTimeout(() => {
+      setError('');
+    }, 2000);
+  };
+
   const fetchData = async () => {
-    const API_URL = ``
+    try {
+      setLoading(true);
+      const API_URL = 'https://aws.random.cat/meow';
+      const res = await axios.get(API_URL);
+      setCats(<CatCard cat={res.file} />);
+      setLoading(false);
+    } catch (e) {
+      showError(e.message);
+    }
   };
 
   useEffect(() => {
@@ -12,7 +35,11 @@ const Form = () => {
 
   return (
     <>
-
+      <Wrapper>
+        {loading || null}
+        {cats || null}
+        {error || null}
+      </Wrapper>
     </>
   );
 };
